@@ -10,6 +10,8 @@ services:
     # если убрать порт то внешнему пользователю api стала недоступна
     # ports:
     #   - "500:5000"
+
+    # связка
     volumes:
       - ./titanic-api/model.pkl:/app/model.pkl
 
@@ -22,5 +24,7 @@ services:
     # внешний порт веб
     ports:
       - "8000:8501"
+
+    # связка
     volumes:
       - ./streamlit-service/streamlit_app.py:/app/streamlit_app.py

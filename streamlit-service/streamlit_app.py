@@ -13,6 +13,8 @@ port_api = "5000"
 # Заголовок приложения
 st.title("Titanic Survival Prediction")
 
+# st.title("!!!!!!!")
+
 # Ввод данных
 st.write("Enter the passenger details:")
 
