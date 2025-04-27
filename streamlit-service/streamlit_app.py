@@ -5,7 +5,9 @@ from requests.exceptions import ConnectionError
 # для запуска в терминале надо написать
 # streamlit run streamlit_app.py
 
-ip_api = "127.0.0.1"
+# ip_api = "127.0.0.1"
+# обращение к контейнеру по внутреннему порту
+ip_api = 'titanic-api'
 port_api = "5000"
 
 # Заголовок приложения

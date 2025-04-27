@@ -7,8 +7,9 @@ services:
       dockerfile: titanic-api/dockerfile
     image: titanic-api:latest
     container_name: titanic-api
-    ports:
-      - "5000:5000"
+    # если убрать порт то внешнему пользователю api стала недоступна
+    # ports:
+    #   - "500:5000"
     volumes:
       - ./titanic-api/model.pkl:/app/model.pkl
 
@@ -18,7 +19,8 @@ services:
       dockerfile: streamlit-service/dockerfile
     image: streamlit-service:latest
     container_name: streamlit-service
+    # внешний порт веб
     ports:
-      - "8501:8501"
+      - "8000:8501"
     volumes:
       - ./streamlit-service/streamlit_app.py:/app/streamlit_app.py
